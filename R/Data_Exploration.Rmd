@@ -1,0 +1,29 @@
+---
+title: "Data Exploration - Philadelphia Schools"
+Date: " 11 June 2020"
+output: html_document
+---
+
+```{r Load Libraries and Data, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+schools_phl <- read.csv("data/Schools.csv")
+
+```
+
+```{r Count number of schools by type}
+schools_by_type <- schools_phl %>% 
+  group_by(TYPE_SPECIFIC)
+
+ggplot(data = schools_by_type,
+       mapping = aes(x = TYPE_SPECIFIC)) +
+geom_bar()
+```
+```{r Count number of schools by grade type}
+
+ggplot(data = schools_by_type,
+       mapping = aes(x = GRADE_LEVEL)) +
+geom_bar() +
+  coord_flip()
+```
+
