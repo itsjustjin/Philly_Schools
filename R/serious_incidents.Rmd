@@ -2,7 +2,7 @@
 title: "Serious Incidents in Philadelphia Schools during SY18-19"
 author: "Jin Chen"
 date: "7/22/2020"
-output: html_document
+output: github_document
 
 ---
 I first begin by loading tidyverse and readxl, the two packages we will be using. I then define the url for the data source as url and the destination file as destfile. I then load the excel sheet and save it as the incidents_df data frame.
