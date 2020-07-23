@@ -44,12 +44,13 @@ ggplot(data = bytype, aes(x = reorder(INCIDENT_TYPE, -Total),y = Total)) +
   theme(axis.text.x = element_text(angle = 45, vjust = 1.1, hjust = 1.0))
 ```
 
-![](serious_incidents_files/figure-gfm/Graph%20it-1.png)<!-- --> Thus
-ends my initial exploration into this data file. The School District of
-Philadelphia (SDP) also provides historical data on serious incidents
-which I may look into next. I can also explore incidents by school using
-the “SCHOOL\_ID” identifier by joining a dataset with that ID
-corresponding with the school name.
+![](serious_incidents_files/figure-gfm/Graph%20it-1.png)<!-- -->
+
+Thus ends my initial exploration into this data file. The School
+District of Philadelphia (SDP) also provides historical data on serious
+incidents which I may look into next. I can also explore incidents by
+school using the “SCHOOL\_ID” identifier by joining a dataset with that
+ID corresponding with the school name.
 
 **Potential future questions**
 
