@@ -1,8 +1,8 @@
 ---
-title: "Serious Incidents Part 2: Schools with the Most Incidents"
+title: "Philadelphia Schools Serious Incidents Part 2: Schools with the Most Incidents"
 author: "Jin Chen"
 date: "7/27/2020"
-output: html_document
+output: github_document
 ---
 
 # Purpose
