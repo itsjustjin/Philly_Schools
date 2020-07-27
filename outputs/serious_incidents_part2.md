@@ -7,7 +7,7 @@ Jin Chen
 # Purpose
 
 **Potential questions generated at the end of Part 1. I will answer
-question \#3 in this sectio. **
+question \#3 in this section.**
 
 1.Are there any trends of SDP serious incidents by type? For example,
 has “Disorderly Conduct” always been the vast majority of incidents?
