@@ -1,11 +1,12 @@
 ---
-title: "serious_incidents_part2"
+title: "Serious Incidents Part 2: Schools with the Most Incidents"
 author: "Jin Chen"
 date: "7/27/2020"
 output: html_document
 ---
 
-**Potential questions generated at the end of Part 1. I will answer question #3 in this section**
+# Purpose
+**Potential questions generated at the end of Part 1. I will answer question #3 in this sectio. **
 
 1.Are there any trends of SDP serious incidents by type? For example, has "Disorderly Conduct" always been the vast majority of incidents?
 
@@ -17,16 +18,15 @@ output: html_document
 
 5.Is there any correlation between number of serious incidents and other factors such as attendance and graduation rates?
 
-
----
-I load the same data used in Part 1. I set the directory to enable reproducibility across multiple parts of this project. Without it, I would need to set the directory manually for each separate rmd file.
+# Content
+I load the same data used in Part 1. 
 
 I will also only be working with the 2018-2019 data for both serious incidents and school ID matchings. 
 
 ```{r Load Libraries and Data, message=FALSE, warning=FALSE}
 #R Studio API Code
-library(rstudioapi)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+#library(rstudioapi)
+#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 library(tidyverse)
 library(readxl)
@@ -59,6 +59,7 @@ What I have realized is that the top 10 schools do not distinguish between high 
 
 Lets do a quick visualization of what we have. First, we create a new column that distinguishes Lincoln High from the other schools. This will come in handy to highlight the fact that Lincoln has the most incidents. 
 
+# Structure and Formatting
 ```{r}
 incidents_grouped_df <- incidents_grouped_df %>% 
   mutate(School = 
@@ -74,19 +75,22 @@ incidents_grouped_df %>%
   geom_col(aes(fill = School)) +
   coord_flip() +
   theme_tufte() +
-  labs(title = "Abraham Lincoln High School Has the Most Cases of Reported Serious Incidents in Philadelphia Schools",
+  labs(title = "Lincoln High Has the Most Cases of Reported Serious Incidents",
        x = "School Name",
        y = "Total Number of Serious Incidents",
        caption = "Data from 2018-2019 School Year") +
   theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 1)) +
   scale_fill_manual(values = c("gold", "grey"))
 ```
+
 We show only the top 20 schools with the most incidents and color Lincoln's bar gold for its school colors (black and gold). Thus ends this visualization with the purpose of answering the question "Do some schools have more reported incidents than others?". 
 
 We see that the 4 schools with the most incidents have over 100 reported incidents. Furthermore, Harding and Lincoln have visibily more incidents than the rest.
 
-**Potential Future Questions**
-1. Lets dig deeper into Lincoln High's historical numbers. What has the trends been?
+# **Potential Future Questions**
+
+1. Lets dig deeper into Lincoln High's historical numbers. What are the historical trends?
 
 2. I can look at the numbers statistically. What are the mean and median incidents for all schools? for middle schools? for high schools?
 
