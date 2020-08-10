@@ -56,6 +56,10 @@ ggplot(incidents_grouped_levels_df,
   gghighlight(Total > 1600) +
   theme_tufte() +
   theme(legend.position = "none") +
+  labs(title = "Philadelphia Serious Incidents by School Level",
+       subtitle = "Data from School Year 2018-2019",
+       y = "",
+       x = "") +
   coord_flip(ylim = c(0, 1800)) 
 
 
