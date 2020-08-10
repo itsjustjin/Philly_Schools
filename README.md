@@ -30,3 +30,9 @@ I joined the Serious Incidents dataset with Schools Information to analyze which
   2. Graphing with ggplot
   
 ![image of final output](https://github.com/itsjustjin/Philly_Schools/raw/master/outputs/serious_incidents_part2_files/figure-gfm/unnamed-chunk-2-1.png)
+
+**[8.9.2020 - Serious Incidents by School Level](https://github.com/simplyjin/Serious-Incidents-in-Philadelphia-Schools/blob/master/R/serious_incidents_by_level.R)**
+
+Using the same set from my previous analysis, I graphed incidents by school level(high school, middle, etc.). It is interesting to see that the elementary-middle level has more cases than high schools although not by much.
+
+![image of final output](https://github.com/simplyjin/Serious-Incidents-in-Philadelphia-Schools/blob/master/outputs/Plot_by_school_level.png)
